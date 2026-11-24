@@ -41,13 +41,6 @@ Grinding for weapon camos in Modern Warfare 4 is a massive time sink. Tracking w
 
 ---
 
-## 🖼️ Main Interface
-
-<div align="center">
-  <img src="docs/screenshots/main-menu.png" alt="MW4 Camo Tracker Interface" width="600" style="border-radius: 12px;">
-</div>
-
----
 
 ## 🛡️ Antivirus & Anti-Cheat Notice
 
